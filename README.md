@@ -8,6 +8,10 @@ Notes and links from ElixirDaze 2018
 
 ## Thursday
 
+### Why Elixir Matters - Osa Gaius
+
+- Explained History of functional programming including Lambda Calculus in the 30's, Lisp in 1960, Scheme in 1970, and Erlang in 1986 etc.
+
 ### Ben Marx - Bleacher Report - Imperfect architecture
 
 - API Gateway single point of failure
@@ -22,9 +26,23 @@ Notes and links from ElixirDaze 2018
     it more resilient for things not needed to go directly through gateway
 - architecture - systems and people
   - system lifecycle
-  - wabi-sabi
+  - Wabi-Sabi - basically implies that things can be imperfect and unfinished, yet still beautiful
+  - Systems
+    - Plan > Code > QA > Deploy -- this doesn't actually work in life or in software development
+    - Instead, you introduce, evaluate, adjust, and start again.
+    - App Fallback Logic -- Things fall apart, not realistic for things to work at all times,
+    - Using task.yield instead of task.await
+  - People
+    - People lifecycle uses introduce > evaluate > adjust schedule
+    - Trusted Autonomy - Trust but Verify
+    - Bidirectional Ideas
+  - Using kafka with erlang drivers and elixer driver
+    - elixir driver crashed server
+    - didn't know whether to fix driver or switch services or what
+    - ended up building ruby library
   - growth, decay, growth
     - test, docs, standards in place to prevent large periods of decay
+    - Embrace idea of symmetry and disonnence and whateve ryou do now will decay in so many months
 - introducing new technology
   - choose least worst option (works for now, periodically re-evaluate)
   - needs maintained - requires people
@@ -41,21 +59,44 @@ Notes and links from ElixirDaze 2018
   - if nodes cant talk due to network issue, multiple nodes could have processes that can be reached by clients
 - have a way to consistently manage state in elixir other than databases
   - distributed systems - cap theorem
+    - When a network is partitioned you can either be available or consistent
+    - Some problems need consistency
     - available vs consistent
     - paxos => raft
     - https://github.com/toniqsystems/raft
-    - logs - linearized writes on top of rocksdb
+    - logs - linearized writes on top of rocksdb, replicated across all nodes
 
-### Deep dev into hex
+### Crypto + Concurrency - Anna Neyzberg
 
-- pkg manager for erlang / elixir ecosystem
+- Big idea behind cryptocurrencies is a digital transfer over internet that isnt back by hard collateral
+- semi anonymous and secure
+- Cryptography
+  - bitcoin uses proof-of-work from hashcash(earliest form of digital currency)
+- How dows bitcoin work?
+  - each node has its own copy of the blockchain
+  - blockchain is just ledger of transactions
+
+- How does relate to Elixir?
+  - decentralized ledger
+  - processes - message processing
+
+
+### Deep Dive into Hex - Todd Resudek
+
+- Hex is the pkg manager for erlang / elixir ecosystem
+  - It is analagous to NPM for Node.js, or Gems for Ruby
+  - Hex has about 6000 packages available compared to RubyGems 9200
+  - Hex allows you to work fawster, prevent issues, debug quicker
 - mix hex.info
   - mix hex.info packagename
   - mix hex.info packagename version
 - mix hex.search term
 - mix hex.docs online packagename (hex 0.17.4)
+  - loads up documentation for packagename
+  - only compatible with > 0.17
 - mix hex.docs online packagename version
-- mix hex.docs fetch (offline - downloads docs for all dependencies in your current app)
+- mix hex.docs fetch
+  - (offline - downloads docs for all dependencies in your current app)
 - mix hex.docs fetch packagename (outside of app)
 - mix hex.docs offline packagename (will download if it isnt already fetched)
 - use -latest flag to override
@@ -69,28 +110,41 @@ Notes and links from ElixirDaze 2018
   - mix hex.config
   - mix hex.config key
 - mix hex.outdated (shows current, latest, update, update possible)
+  - --all will list all
 - mix hex.audit
 - mix hex.publish
 - mix hex.retire
 
-### format your elixir code now
+### Format Your Elixir Code Now - Jake Worth
+
+- Autoformatter for Elixir requireed after 1.6, forcing uniform code
+- Distinct style guides separate us
+  - Elixir should have consistent style
+  - We need collective ownership
 - CI run mix format --check-formated
 
 ## Friday
 
 ### hitchhikers guide to the unexpected
+
 - property based testing
 - supervisors
   - permanent, transient, temporary
   - supervisors, boot order
   - know how it boots, how it fails, supervision tree
 
-### taking elixir to the metal
+### Taking Elixir to the Metal - Sonny Scroggin
+
 - elixir and outside world: ports, erl_interface, C Nodes, Port Drivers, NIFs
   - mix uses port to talk to git binary, jiffy uses NIF
+  - Erlangs inet_drv port driver for networking
+  - Jiffy JSON encoding/decoding
+    - really fast json encoder
+    - written in C
 - NIFs - Native Implemented Functions
   - Usually implemented in C\C++
   - Reasons to write
+    - Erlang was not designed for raw CPU throughput
     - Deal directly hardware
     - Interop w/ graphics
     - Functionality already exists in C code already exosts
@@ -114,19 +168,56 @@ Notes and links from ElixirDaze 2018
       - safe way to return pointers to native data structures
   - erl_nif.h in C
     - ErlEnv
-      - Rep an env that can host erlang terms
+      - Passed as the first argument to all NIFs
+      - Represents an environment that can host erlang terms
       - contains info about calling erlang process
+      - All terms in an environment are valid as long as the environment is valid
     - ERL_NIF_TERM
   - Rustler - lib for writing Erlang NIFs in Rust
     - https://github.com/hansihe/rustler
+    - Handles encoding and decoding of erlang tems
+    - Catches rust panics beffore they unwind to C
+    - Provides faciliities for generating the bolilerplate for interacting with the Erlang VM
     - code you write in Rust NIF should never be able to crash the Erlang VM
+  - Nif Resource Objects
+    - safe way t oreturn pointers to native data strctures from a nIF
+    - Can be stored and passed between processes on the same code
+    - The only real end usage is to pass it back as an argument to a NIF
+  - Rescheduling
+    - Erlang NIF API provides a way for a NIF to reschedule itself directly with enif_schedule_nif
+    - Combined with rustler::schedule::consume_timeslice allows all chunking to be done directly in the NIF
+    - Not yet supported in Rustler due to safety conc=rns.
+  - Thread NIFs
+    - Spawn a separate OS thread to do the work
+    - Send the result as a message to the calling process.
   - Dirty NIFs
     - allows you to call a NIF w/o worrying about blocking a normal scheduler
     - by default have same number of dirty schedulers as normal schedulers
 
-### Build your own web framework
+### Build your own web framework in Elixir - German Velasco
 
 - Cowboy, Plug, EEx
+- Basics
+  - really quick step by step of getting started with Cowboy.
+  - have to add plugs for routing and logging get requests etc
+- Templates with EEx
+  - require EEx
+  - compiles template to a function by passing the template and variables
+  - comes with smart engine out of the box
+- Handling Forms
+  - use plug parsers and define what kind of parser you want, (urlencoded, multipart)
+  - connection construct has query params key, body params key, and params key
+  - define the route and module
+  - define all function to retrieve all posts
+  - throw into supervision tree
+- Sessions
+  - Use Plug.session with cookie and a key for the cookie and define a signing salt
+  - In order to access session, need secret_key_base
+- Static Assets
+  - use Plug.Static
+  - going to look for static asset, if cant find it, it goes throught other plugs
+  - can limit directories to look with only:
+  - priv/static/css
 
 ## Raxx
 
