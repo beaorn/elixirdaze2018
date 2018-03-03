@@ -54,6 +54,8 @@ Notes and links from ElixirDaze 2018
 
 ### Consistent Distributed Elixir - [Chris Keathley](https://github.com/keathley)
 
+**Raft**: https://github.com/toniqsystems/raft
+
 - everything is a process in erlang
 - limit access to external resource
   - genserver for global lock
@@ -67,7 +69,6 @@ Notes and links from ElixirDaze 2018
     - Some problems need consistency
     - available vs consistent
     - paxos => raft
-    - https://github.com/toniqsystems/raft
     - logs - linearized writes on top of rocksdb, replicated across all nodes
 
 ### Crypto + Concurrency - [Anna Neyzberg](https://twitter.com/ANeyzb)
@@ -137,7 +138,7 @@ Notes and links from ElixirDaze 2018
 
 ## Friday
 
-### hitchhikers guide to the unexpected
+### Keynote: The Hitchhiker’s Guide to the Unexpected - [Fred Hebert](https://github.com/ferd)
 
 - property based testing
 - supervisors
@@ -145,7 +146,9 @@ Notes and links from ElixirDaze 2018
   - supervisors, boot order
   - know how it boots, how it fails, supervision tree
 
-### Taking Elixir to the Metal - Sonny Scroggin
+### Taking Elixir to the Metal - [Sonny Scroggin](https://github.com/scrogson)
+
+**Rustler**: https://github.com/hansihe/rustler
 
 - elixir and outside world: ports, erl_interface, C Nodes, Port Drivers, NIFs
   - mix uses port to talk to git binary, jiffy uses NIF
@@ -206,7 +209,9 @@ Notes and links from ElixirDaze 2018
     - allows you to call a NIF w/o worrying about blocking a normal scheduler
     - by default have same number of dirty schedulers as normal schedulers
 
-### Build your own web framework in Elixir - German Velasco
+### Build your own web framework in Elixir - [German Velasco](https://github.com/germsvel)
+
+**Code**: https://github.com/germsvel/daze
 
 - Cowboy, Plug, EEx
 - Basics
@@ -231,14 +236,19 @@ Notes and links from ElixirDaze 2018
   - can limit directories to look with only:
   - priv/static/css
 
-## Raxx
+## Purify your web development with Raxx - [Peter Saxton](https://github.com/CrowdHailer)
 
-- https://github.com/CrowdHailer/raxx
+**Talk**: http://crowdhailer.me/2018-01-17/simple-web-services-with-ace/
+**Raxx**: https://github.com/CrowdHailer/raxx
+**Ace**: https://github.com/CrowdHailer/Ace
+
 - HTTP interface for servers, frameworks
 - Ace - server to run Raxx apps
   - HTTP/2 + HTTPS by default
 
-## Phoenix Ecto Contexts DDD
+## Building beautiful systems with Phoenix contexts and Domain-Driven Design - [Andrew Hao](https://github.com/andrewhao)
+
+**Slides**: https://speakerdeck.com/andrewhao/building-beautiful-systems-with-phoenix-contexts-and-ddd
 
 - Contexts
   - Elixir modules that group system functionality
