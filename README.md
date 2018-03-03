@@ -86,6 +86,8 @@ Notes and links from ElixirDaze 2018
 
 ### Deep Dive into Hex - [Todd Resudek](https://github.com/supersimple)
 
+**Slides**: https://github.com/supersimple/deep-dive-into-hex-slides
+
 - Hex is the pkg manager for erlang / elixir ecosystem
   - It is analagous to NPM for Node.js, or Gems for Ruby
   - Hex has about 6000 packages available compared to RubyGems 9200
