@@ -273,5 +273,6 @@ Notes and links from ElixirDaze 2018
         - https://github.com/otobus/event_bus
 
 
-## Abstract Alchemy
-- https://github.com/expede/witchcraft
+## Abstract Alchemy: Monads, ADTs, and Parallelized Pipes - [Brooklyn Zelenka](https://github.com/expede)
+
+**Witchcraft** - https://github.com/expede/witchcraft
