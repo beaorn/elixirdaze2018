@@ -80,11 +80,9 @@ Notes and links from ElixirDaze 2018
 - How dows bitcoin work?
   - each node has its own copy of the blockchain
   - blockchain is just ledger of transactions
-
 - How does relate to Elixir?
   - decentralized ledger
   - processes - message processing
-
 
 ### Deep Dive into Hex - [Todd Resudek](https://github.com/supersimple)
 
