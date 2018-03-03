@@ -8,11 +8,15 @@ Notes and links from ElixirDaze 2018
 
 ## Thursday
 
-### Why Elixir Matters - Osa Gaius
+### Keynote - [Rob Conery](https://twitter.com/robconery)
+
+### Why Elixir Matters - [Osa Gaius](https://github.com/osagaius)
+
+**Slides**: https://speakerdeck.com/osayame/why-elixir-matters-a-genealogy-of-functional-programming-lonestar-elixirconf-2018?utm_content=buffer10479&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
 
 - Explained History of functional programming including Lambda Calculus in the 30's, Lisp in 1960, Scheme in 1970, and Erlang in 1986 etc.
 
-### Ben Marx - Bleacher Report - Imperfect architecture
+### Making Noise - [Ben Marx](https://github.com/bgmarx)
 
 - API Gateway single point of failure
   - change things in isolation not everything at once
@@ -48,7 +52,7 @@ Notes and links from ElixirDaze 2018
   - needs maintained - requires people
   - isolate experimentation
 
-### Consistent Distributed Elixir - Chris
+### Consistent Distributed Elixir - [Chris Keathley](https://github.com/keathley)
 
 - everything is a process in erlang
 - limit access to external resource
@@ -66,7 +70,7 @@ Notes and links from ElixirDaze 2018
     - https://github.com/toniqsystems/raft
     - logs - linearized writes on top of rocksdb, replicated across all nodes
 
-### Crypto + Concurrency - Anna Neyzberg
+### Crypto + Concurrency - [Anna Neyzberg](https://twitter.com/ANeyzb)
 
 - Big idea behind cryptocurrencies is a digital transfer over internet that isnt back by hard collateral
 - semi anonymous and secure
@@ -81,7 +85,7 @@ Notes and links from ElixirDaze 2018
   - processes - message processing
 
 
-### Deep Dive into Hex - Todd Resudek
+### Deep Dive into Hex - [Todd Resudek](https://github.com/supersimple)
 
 - Hex is the pkg manager for erlang / elixir ecosystem
   - It is analagous to NPM for Node.js, or Gems for Ruby
@@ -115,13 +119,21 @@ Notes and links from ElixirDaze 2018
 - mix hex.publish
 - mix hex.retire
 
-### Format Your Elixir Code Now - Jake Worth
+### Format Your Elixir Code Now - [Jake Worth](https://github.com/jwworth)
+
+**Slides**: https://speakerdeck.com/jwworth/format-your-elixir-code-now
 
 - Autoformatter for Elixir requireed after 1.6, forcing uniform code
 - Distinct style guides separate us
   - Elixir should have consistent style
   - We need collective ownership
 - CI run mix format --check-formated
+
+### Hardware without Hardware or Lightning without Lightning - [Amos King](https://github.com/adkron)
+
+**Slides**: https://github.com/BinaryNoggin/lightning_without_lightning
+
+**Code**: https://github.com/adkron/grovepi/tree/lightning-sensor
 
 ## Friday
 
