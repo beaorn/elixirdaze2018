@@ -1,10 +1,12 @@
 # ElixirDaze 2018
 
-Notes and links from ElixirDaze 2018
+Notes and links from ElixirDaze 2018 held on March 1-2, 2018 in Denver, CO.
 
 [Website](http://www.elixirdaze.com/) |
 [Twitter](https://twitter.com/elixirdaze) |
 [#ElixirDaze2018](https://twitter.com/hashtag/elixirdaze2018?f=tweets&vertical=default&src=hash)
+
+Recorded Presentations from Confreaks will be available at https://confreaks.tv/events/elixirdaze2018
 
 ![daze]
 
