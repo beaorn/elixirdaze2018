@@ -267,6 +267,7 @@ Recorded Presentations from Confreaks will be available at https://confreaks.tv/
 
 ### Build your own web framework in Elixir - [German Velasco](https://github.com/germsvel)
 
+**Slides**: https://speakerdeck.com/germsvel/build-your-own-web-framework-in-elixir  
 **Code**: https://github.com/germsvel/daze
 
 - Cowboy, Plug, EEx
