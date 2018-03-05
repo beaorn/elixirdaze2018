@@ -6,6 +6,10 @@ Notes and links from ElixirDaze 2018
 [Twitter](https://twitter.com/elixirdaze) |
 [#ElixirDaze2018](https://twitter.com/hashtag/elixirdaze2018?f=tweets&vertical=default&src=hash)
 
+![daze]
+
+[daze]: daze.jpg
+
 ## Thursday
 
 ### Keynote - [Rob Conery](https://twitter.com/robconery)
