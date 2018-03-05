@@ -14,10 +14,13 @@ Notes and links from ElixirDaze 2018
 
 **Slides**: https://speakerdeck.com/osayame/why-elixir-matters-a-genealogy-of-functional-programming-lonestar-elixirconf-2018?utm_content=buffer10479&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
 
+- The rise in popularity of the internet and the need for non-interrupted availability of services has extended a class of problems that Erlang can solve - Joe Armstrong
+
 - Explained History of functional programming including Lambda Calculus in the 30's, Lisp in 1960, Scheme in 1970, and Erlang in 1986 etc.
 
 ### Making Noise - [Ben Marx](https://github.com/bgmarx)
 
+- API Gateway Pros - Simple, Secure
 - API Gateway single point of failure
   - change things in isolation not everything at once
   - coupled service dependencies
@@ -46,7 +49,7 @@ Notes and links from ElixirDaze 2018
     - ended up building ruby library
   - growth, decay, growth
     - test, docs, standards in place to prevent large periods of decay
-    - Embrace idea of symmetry and disonnence and whateve ryou do now will decay in so many months
+    - Embrace idea of symmetry and dissonance and whatever you do now will decay in so many months
 - introducing new technology
   - choose least worst option (works for now, periodically re-evaluate)
   - needs maintained - requires people
@@ -68,8 +71,15 @@ Notes and links from ElixirDaze 2018
     - When a network is partitioned you can either be available or consistent
     - Some problems need consistency
     - available vs consistent
+      - Available
+        - Every request receives a response without guarantee that it contains the most recent write
+      - Consistent
+        - Every read receives the most recent write but may not always receive a response
+      - AP - Available during partitions
+      - CP - Consistent during partitions
     - paxos => raft
     - logs - linearized writes on top of rocksdb, replicated across all nodes
+    - Leader/follower distributed system design
 
 ### Crypto + Concurrency - [Anna Neyzberg](https://twitter.com/ANeyzb)
 
@@ -78,11 +88,18 @@ Notes and links from ElixirDaze 2018
 - Cryptography
   - bitcoin uses proof-of-work from hashcash(earliest form of digital currency)
 - How dows bitcoin work?
+  - a decentralized cluster of nodes
   - each node has its own copy of the blockchain
   - blockchain is just ledger of transactions
+  - each data point points to the previous data point
 - How does relate to Elixir?
   - decentralized ledger
   - processes - message processing
+    - light weight
+    - ways to communicate between processes
+      - send
+      - receive
+    - agents - agents manage state
 
 ### Deep Dive into Hex - [Todd Resudek](https://github.com/supersimple)
 
@@ -92,10 +109,16 @@ Notes and links from ElixirDaze 2018
   - It is analagous to NPM for Node.js, or Gems for Ruby
   - Hex has about 6000 packages available compared to RubyGems 9200
   - Hex allows you to work fawster, prevent issues, debug quicker
+- Available Packages
+  - Hex - 6000
+  - Rugy Games - 9200
+  - Crates - 14000
+  - NPM - 500000
 - mix hex.info
   - mix hex.info packagename
   - mix hex.info packagename version
 - mix hex.search term
+  - finds packages
 - mix hex.docs online packagename (hex 0.17.4)
   - loads up documentation for packagename
   - only compatible with > 0.17
@@ -117,18 +140,45 @@ Notes and links from ElixirDaze 2018
 - mix hex.outdated (shows current, latest, update, update possible)
   - --all will list all
 - mix hex.audit
+  - shows retired packages that you have installed as dependencies
 - mix hex.publish
+  - can publish privately
+  - watch out for pre-release dependencies
 - mix hex.retire
+  - signifies a package is no longer recommended
+  - retirement must include a valid reason
 
 ### Format Your Elixir Code Now - [Jake Worth](https://github.com/jwworth)
 
 **Slides**: https://speakerdeck.com/jwworth/format-your-elixir-code-now
 
+- Linting vs Autoformatting
+  - Linter - recommends changes
+  - Autoformatter - recommends/changes code
+- languages provide a lot of different ways to do the same thing
+- Pros of Autoformatting
+  - productivity
+    - gives more time for important decisions
+  - consistency
+    - friendliness to new comers to your code
+    - helps relieve workload on manual code reviews
+  - collective ownership
+- Negs of Autoformatting
+  - disregards any particular programmers preferred coding style
 - Autoformatter for Elixir requireed after 1.6, forcing uniform code
 - Distinct style guides separate us
   - Elixir should have consistent style
   - We need collective ownership
 - CI run mix format --check-formated
+
+### Is Security on Your Nerves? - [Paul Rogers]
+
+  - Security between Http based communication
+  - Https does not secure your network calls to be safe from ManInTheMiddle Attacks
+  - RSA
+    - Both client and server have a piece of the puzzle besides the password and username
+    - These pieces are not sent over the http request but instead used for calculations to determine if the other side is who they say they are.
+
 
 ### Hardware without Hardware or Lightning without Lightning - [Amos King](https://github.com/adkron)
 
@@ -250,6 +300,10 @@ Notes and links from ElixirDaze 2018
 
 **Slides**: https://speakerdeck.com/andrewhao/building-beautiful-systems-with-phoenix-contexts-and-ddd
 
+- High Cohesion
+  - Similar concepts belong together in code
+- Loose Coupling
+  - minimal dependencies on external systems
 - Contexts
   - Elixir modules that group system functionality
   - mix phx.gen.html Identity User users name:string email:string
