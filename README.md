@@ -12,7 +12,7 @@ Notes and links from ElixirDaze 2018
 
 ### Why Elixir Matters - [Osa Gaius](https://github.com/osagaius)
 
-**Slides**: https://speakerdeck.com/osayame/why-elixir-matters-a-genealogy-of-functional-programming-lonestar-elixirconf-2018?utm_content=buffer10479&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+**Slides**: https://speakerdeck.com/osayame/why-elixir-matters-a-genealogy-of-functional-programming-lonestar-elixirconf-2018
 
 - The rise in popularity of the internet and the need for non-interrupted availability of services has extended a class of problems that Erlang can solve - Joe Armstrong
 
@@ -286,17 +286,17 @@ Notes and links from ElixirDaze 2018
   - can limit directories to look with only:
   - priv/static/css
 
-## Purify your web development with Raxx - [Peter Saxton](https://github.com/CrowdHailer)
+### Purify your web development with Raxx - [Peter Saxton](https://github.com/CrowdHailer)
 
-**Talk**: http://crowdhailer.me/2018-01-17/simple-web-services-with-ace/
-**Raxx**: https://github.com/CrowdHailer/raxx
+**Talk**: http://crowdhailer.me/2018-01-17/simple-web-services-with-ace/  
+**Raxx**: https://github.com/CrowdHailer/raxx  
 **Ace**: https://github.com/CrowdHailer/Ace
 
 - HTTP interface for servers, frameworks
 - Ace - server to run Raxx apps
   - HTTP/2 + HTTPS by default
 
-## Building beautiful systems with Phoenix contexts and Domain-Driven Design - [Andrew Hao](https://github.com/andrewhao)
+### Building beautiful systems with Phoenix contexts and Domain-Driven Design - [Andrew Hao](https://github.com/andrewhao)
 
 **Slides**: https://speakerdeck.com/andrewhao/building-beautiful-systems-with-phoenix-contexts-and-ddd
 
@@ -327,6 +327,6 @@ Notes and links from ElixirDaze 2018
         - https://github.com/otobus/event_bus
 
 
-## Abstract Alchemy: Monads, ADTs, and Parallelized Pipes - [Brooklyn Zelenka](https://github.com/expede)
+### Abstract Alchemy: Monads, ADTs, and Parallelized Pipes - [Brooklyn Zelenka](https://github.com/expede)
 
 **Witchcraft** - https://github.com/expede/witchcraft
