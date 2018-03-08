@@ -292,6 +292,10 @@ Recorded Presentations from Confreaks will be available at https://confreaks.tv/
   - going to look for static asset, if cant find it, it goes throught other plugs
   - can limit directories to look with only:
   - priv/static/css
+  
+### Become a Test Whisperer: what are your tests are telling you? - [Jeffrey Matthias](https://github.com/idlehands)
+
+**Slides**: https://speakerdeck.com/idlehands/elixirdaze-become-a-test-whisperer-what-are-your-tests-telling-you
 
 ### Purify your web development with Raxx - [Peter Saxton](https://github.com/CrowdHailer)
 
