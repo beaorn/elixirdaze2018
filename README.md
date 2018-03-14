@@ -6,7 +6,7 @@ Notes and links from ElixirDaze 2018 held on March 1-2, 2018 in Denver, CO.
 [Twitter](https://twitter.com/elixirdaze) |
 [#ElixirDaze2018](https://twitter.com/hashtag/elixirdaze2018?f=tweets&vertical=default&src=hash)
 
-Recorded Presentations from Confreaks will be available at https://confreaks.tv/events/elixirdaze2018
+Recorded Presentations from Confreaks are available at https://confreaks.tv/events/elixirdaze2018
 
 ![daze]
 
@@ -16,8 +16,11 @@ Recorded Presentations from Confreaks will be available at https://confreaks.tv/
 
 ### Keynote - [Rob Conery](https://twitter.com/robconery)
 
+**Video**: http://confreaks.tv/videos/elixirdaze2018-keynote
+
 ### Why Elixir Matters - [Osa Gaius](https://github.com/osagaius)
 
+**Video**: http://confreaks.tv/videos/elixirdaze2018-why-elixir-matters-a-genealogy-of-functional-programming  
 **Slides**: https://speakerdeck.com/osayame/why-elixir-matters-a-genealogy-of-functional-programming-lonestar-elixirconf-2018
 
 - The rise in popularity of the internet and the need for non-interrupted availability of services has extended a class of problems that Erlang can solve - Joe Armstrong
@@ -25,6 +28,8 @@ Recorded Presentations from Confreaks will be available at https://confreaks.tv/
 - Explained History of functional programming including Lambda Calculus in the 30's, Lisp in 1960, Scheme in 1970, and Erlang in 1986 etc.
 
 ### Making Noise - [Ben Marx](https://github.com/bgmarx)
+
+**Video**: http://confreaks.tv/videos/elixirdaze2018-making-noise
 
 - API Gateway Pros - Simple, Secure
 - API Gateway single point of failure
@@ -63,6 +68,7 @@ Recorded Presentations from Confreaks will be available at https://confreaks.tv/
 
 ### Consistent Distributed Elixir - [Chris Keathley](https://github.com/keathley)
 
+**Video**: http://confreaks.tv/videos/elixirdaze2018-consistent-distributed-elixir  
 **Raft**: https://github.com/toniqsystems/raft
 
 - everything is a process in erlang
@@ -89,6 +95,8 @@ Recorded Presentations from Confreaks will be available at https://confreaks.tv/
 
 ### Crypto + Concurrency - [Anna Neyzberg](https://twitter.com/ANeyzb)
 
+**Video**: http://confreaks.tv/videos/elixirdaze2018-crypto-concurrency
+
 - Big idea behind cryptocurrencies is a digital transfer over internet that isnt back by hard collateral
 - semi anonymous and secure
 - Cryptography
@@ -109,6 +117,7 @@ Recorded Presentations from Confreaks will be available at https://confreaks.tv/
 
 ### Deep Dive into Hex - [Todd Resudek](https://github.com/supersimple)
 
+**Video**: http://confreaks.tv/videos/elixirdaze2018-a-deep-dive-into-hex  
 **Slides**: https://github.com/supersimple/deep-dive-into-hex-slides
 
 - Hex is the pkg manager for erlang / elixir ecosystem
@@ -156,6 +165,7 @@ Recorded Presentations from Confreaks will be available at https://confreaks.tv/
 
 ### Format Your Elixir Code Now - [Jake Worth](https://github.com/jwworth)
 
+**Video**: http://confreaks.tv/videos/elixirdaze2018-format-your-elixir-code-now  
 **Slides**: https://speakerdeck.com/jwworth/format-your-elixir-code-now
 
 - Linting vs Autoformatting
@@ -177,7 +187,9 @@ Recorded Presentations from Confreaks will be available at https://confreaks.tv/
   - We need collective ownership
 - CI run mix format --check-formated
 
-### Is Security on Your Nerves? - [Paul Rogers]
+### Is Security on Your Nerves? - Paul Rogers
+
+**Video**: http://confreaks.tv/videos/elixirdaze2018-is-security-on-your-nerves
 
   - Security between Http based communication
   - Https does not secure your network calls to be safe from ManInTheMiddle Attacks
@@ -188,13 +200,15 @@ Recorded Presentations from Confreaks will be available at https://confreaks.tv/
 
 ### Hardware without Hardware or Lightning without Lightning - [Amos King](https://github.com/adkron)
 
-**Slides**: https://github.com/BinaryNoggin/lightning_without_lightning
-
+**Video**: http://confreaks.tv/videos/elixirdaze2018-hardware-without-hardware-or-lightning-without-lightning  
+**Slides**: https://github.com/BinaryNoggin/lightning_without_lightning  
 **Code**: https://github.com/adkron/grovepi/tree/lightning-sensor
 
 ## Friday
 
 ### Keynote: The Hitchhiker’s Guide to the Unexpected - [Fred Hebert](https://github.com/ferd)
+
+**Video**: http://confreaks.tv/videos/elixirdaze2018-keynote-the-hitchhiker-s-guide-to-the-unexpected
 
 - property based testing
 - supervisors
@@ -204,6 +218,7 @@ Recorded Presentations from Confreaks will be available at https://confreaks.tv/
 
 ### Taking Elixir to the Metal - [Sonny Scroggin](https://github.com/scrogson)
 
+**Video**: http://confreaks.tv/videos/elixirdaze2018-taking-elixir-to-the-metal  
 **Rustler**: https://github.com/hansihe/rustler
 
 - elixir and outside world: ports, erl_interface, C Nodes, Port Drivers, NIFs
@@ -267,6 +282,7 @@ Recorded Presentations from Confreaks will be available at https://confreaks.tv/
 
 ### Build your own web framework in Elixir - [German Velasco](https://github.com/germsvel)
 
+**Video**: http://confreaks.tv/videos/elixirdaze2018-build-your-very-own-web-framework-in-elixir  
 **Slides**: https://speakerdeck.com/germsvel/build-your-own-web-framework-in-elixir  
 **Code**: https://github.com/germsvel/daze
 
@@ -295,10 +311,12 @@ Recorded Presentations from Confreaks will be available at https://confreaks.tv/
   
 ### Become a Test Whisperer: what are your tests are telling you? - [Jeffrey Matthias](https://github.com/idlehands)
 
+**Video**:  
 **Slides**: https://speakerdeck.com/idlehands/elixirdaze-become-a-test-whisperer-what-are-your-tests-telling-you
 
 ### Purify your web development with Raxx - [Peter Saxton](https://github.com/CrowdHailer)
 
+**Video**: 
 **Talk**: http://crowdhailer.me/2018-01-17/simple-web-services-with-ace/  
 **Raxx**: https://github.com/CrowdHailer/raxx  
 **Ace**: https://github.com/CrowdHailer/Ace
@@ -309,6 +327,7 @@ Recorded Presentations from Confreaks will be available at https://confreaks.tv/
 
 ### Building beautiful systems with Phoenix contexts and Domain-Driven Design - [Andrew Hao](https://github.com/andrewhao)
 
+**Video**:  
 **Slides**: https://speakerdeck.com/andrewhao/building-beautiful-systems-with-phoenix-contexts-and-ddd
 
 - High Cohesion
@@ -340,4 +359,5 @@ Recorded Presentations from Confreaks will be available at https://confreaks.tv/
 
 ### Abstract Alchemy: Monads, ADTs, and Parallelized Pipes - [Brooklyn Zelenka](https://github.com/expede)
 
+**Video**:  
 **Witchcraft** - https://github.com/expede/witchcraft
