@@ -311,13 +311,13 @@ Recorded Presentations from Confreaks are available at https://confreaks.tv/even
   
 ### Become a Test Whisperer: what are your tests are telling you? - [Jeffrey Matthias](https://github.com/idlehands)
 
-**Video**:  
+**Video**: https://confreaks.tv/videos/elixirdaze2018-become-a-test-whisperer-what-are-your-tests-are-telling-you  
 **Slides**: https://speakerdeck.com/idlehands/elixirdaze-become-a-test-whisperer-what-are-your-tests-telling-you
 
 ### Purify your web development with Raxx - [Peter Saxton](https://github.com/CrowdHailer)
 
-**Video**: 
-**Talk**: http://crowdhailer.me/2018-01-17/simple-web-services-with-ace/  
+**Video**: https://confreaks.tv/videos/elixirdaze2018-purify-your-web-development-with-raxx . 
+**Talk**: http://crowdhailer.me/2018-01-17/simple-web-services-with-ace/  
 **Raxx**: https://github.com/CrowdHailer/raxx  
 **Ace**: https://github.com/CrowdHailer/Ace
 
@@ -327,7 +327,7 @@ Recorded Presentations from Confreaks are available at https://confreaks.tv/even
 
 ### Building beautiful systems with Phoenix contexts and Domain-Driven Design - [Andrew Hao](https://github.com/andrewhao)
 
-**Video**:  
+**Video**: https://confreaks.tv/videos/elixirdaze2018-building-beautiful-systems-with-phoenix-contexts-and-domain-driven-design  
 **Slides**: https://speakerdeck.com/andrewhao/building-beautiful-systems-with-phoenix-contexts-and-ddd
 
 - High Cohesion
@@ -359,5 +359,5 @@ Recorded Presentations from Confreaks are available at https://confreaks.tv/even
 
 ### Abstract Alchemy: Monads, ADTs, and Parallelized Pipes - [Brooklyn Zelenka](https://github.com/expede)
 
-**Video**:  
+**Video**: https://confreaks.tv/videos/elixirdaze2018-don-t-let-it-crash-safe-and-convenient-error-handling-with-exceptional  f . 
 **Witchcraft** - https://github.com/expede/witchcraft
